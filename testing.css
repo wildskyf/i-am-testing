@@ -1,0 +1,53 @@
+:root {
+  --border-width: 4px;
+  --warning-color: #EED202; /* #B33A3A; */
+}
+
+html:before, html:after,
+body:before, body:after {
+  content: '';
+  position: fixed;
+  display: block;
+  z-index: 9999;
+  border-color: var(--warning-color);
+  border-style: solid;
+}
+
+html:before {
+  border-left-width: var(--border-width);
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+html:after {
+  border-right-width: var(--border-width);
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body:before {
+  border-top-width: var(--border-width);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+body:after {
+  border-bottom-width: var(--border-width);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+/*
+.corner-ribbon,.corner-ribbon.red{background:#e43}
+.corner-ribbon{z-index:10001;width:350px;position:absolute;text-align:center;line-height:40px;letter-spacing:1px;color:#f0f0f0;transform:rotate(-45deg);opacity:.5;filter:alpha(opacity=40)}
+.corner-ribbon.extension-sticky{position:fixed}
+.corner-ribbon.shadow{box-shadow:0 0 3px rgba(0,0,0,.3)}
+.corner-ribbon.top-right{left:auto;transform:rotate(45deg);
+.corner-ribbon.top-right.s1{width:200px;top:25px;right:-50px}
+.corner-ribbon.smallFont{font-size:11px}
+*/

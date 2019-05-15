@@ -1,0 +1,26 @@
+{
+  "applications": {
+    "gecko": {
+      "id": "iamtesting@wildsky.cc",
+      "strict_min_version": "51.0"
+    }
+  },
+
+  "manifest_version": 2,
+  "name": "I am testing",
+  "description": "Reminder Developers that you are testing.",
+  "version": "0.1.0",
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "css": ["testing.css"],
+      "matches": [
+        "*://localhost/*",
+        "*://*.test/*"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
